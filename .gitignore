@@ -7,10 +7,16 @@
 *.jar
 *.war
 *.ear
+<<<<<<< HEAD
 
 # Directory
 /honcy/hims/target
 /honcy/.idea
 
+=======
+# Directory
+/target
+/.idea
+>>>>>>> 43f38d60f7006d8f2f66a3ea8d08849c08765bf2
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
