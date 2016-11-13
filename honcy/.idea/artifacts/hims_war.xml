@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="hims:war">
-    <output-path>$PROJECT_DIR$/hims/target</output-path>
-    <root id="archive" name="HIMS.war">
-      <element id="artifact" artifact-name="hims:war exploded" />
-    </root>
-  </artifact>
-</component>
