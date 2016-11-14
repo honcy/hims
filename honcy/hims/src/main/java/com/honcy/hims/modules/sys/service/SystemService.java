@@ -159,8 +159,6 @@ public class SystemService extends BaseService implements InitializingBean {
             saveActivitiUser(user);
             // 清除用户缓存
             UserUtils.clearCache(user);
-//			// 清除权限缓存
-//			systemRealm.clearAllCachedAuthorizationInfo();
         }
     }
 
@@ -170,8 +168,6 @@ public class SystemService extends BaseService implements InitializingBean {
         userDao.updateUserInfo(user);
         // 清除用户缓存
         UserUtils.clearCache(user);
-//		// 清除权限缓存
-//		systemRealm.clearAllCachedAuthorizationInfo();
     }
 
     @Transactional(readOnly = false)
@@ -181,8 +177,6 @@ public class SystemService extends BaseService implements InitializingBean {
         deleteActivitiUser(user);
         // 清除用户缓存
         UserUtils.clearCache(user);
-//		// 清除权限缓存
-//		systemRealm.clearAllCachedAuthorizationInfo();
     }
 
     @Transactional(readOnly = false)
@@ -193,8 +187,6 @@ public class SystemService extends BaseService implements InitializingBean {
         // 清除用户缓存
         user.setLoginName(loginName);
         UserUtils.clearCache(user);
-//		// 清除权限缓存
-//		systemRealm.clearAllCachedAuthorizationInfo();
     }
 
     @Transactional(readOnly = false)
@@ -290,8 +282,6 @@ public class SystemService extends BaseService implements InitializingBean {
         saveActivitiGroup(role);
         // 清除用户角色缓存
         UserUtils.removeCache(UserUtils.CACHE_ROLE_LIST);
-//		// 清除权限缓存
-//		systemRealm.clearAllCachedAuthorizationInfo();
     }
 
     @Transactional(readOnly = false)
@@ -301,8 +291,6 @@ public class SystemService extends BaseService implements InitializingBean {
         deleteActivitiGroup(role);
         // 清除用户角色缓存
         UserUtils.removeCache(UserUtils.CACHE_ROLE_LIST);
-//		// 清除权限缓存
-//		systemRealm.clearAllCachedAuthorizationInfo();
     }
 
     @Transactional(readOnly = false)
@@ -373,8 +361,6 @@ public class SystemService extends BaseService implements InitializingBean {
         }
         // 清除用户菜单缓存
         UserUtils.removeCache(UserUtils.CACHE_MENU_LIST);
-//		// 清除权限缓存
-//		systemRealm.clearAllCachedAuthorizationInfo();
         // 清除日志相关缓存
         CacheUtils.remove(LogUtils.CACHE_MENU_NAME_PATH_MAP);
     }
@@ -384,8 +370,6 @@ public class SystemService extends BaseService implements InitializingBean {
         menuDao.updateSort(menu);
         // 清除用户菜单缓存
         UserUtils.removeCache(UserUtils.CACHE_MENU_LIST);
-//		// 清除权限缓存
-//		systemRealm.clearAllCachedAuthorizationInfo();
         // 清除日志相关缓存
         CacheUtils.remove(LogUtils.CACHE_MENU_NAME_PATH_MAP);
     }
@@ -395,8 +379,6 @@ public class SystemService extends BaseService implements InitializingBean {
         menuDao.delete(menu);
         // 清除用户菜单缓存
         UserUtils.removeCache(UserUtils.CACHE_MENU_LIST);
-//		// 清除权限缓存
-//		systemRealm.clearAllCachedAuthorizationInfo();
         // 清除日志相关缓存
         CacheUtils.remove(LogUtils.CACHE_MENU_NAME_PATH_MAP);
     }
@@ -407,7 +389,7 @@ public class SystemService extends BaseService implements InitializingBean {
     public static boolean printKeyLoadMessage(){
         StringBuilder sb = new StringBuilder();
         sb.append("\r\n======================================================================\r\n");
-        sb.append("\r\n    欢迎使用 "+Global.getConfig("productName")+"  - Powered By http://jeesite.com\r\n");
+        sb.append("\r\n    欢迎使用 "+Global.getConfig("productName")+"  - Powered By http://honcy.com\r\n");
         sb.append("\r\n======================================================================\r\n");
         System.out.println(sb.toString());
         return true;
