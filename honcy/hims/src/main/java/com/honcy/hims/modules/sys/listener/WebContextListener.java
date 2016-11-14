@@ -21,9 +21,9 @@ public class WebContextListener extends org.springframework.web.context.ContextL
 
     @Override
     public WebApplicationContext initWebApplicationContext(ServletContext servletContext) {
-//        if (!SystemService.printKeyLoadMessage()){
-//            return null;
-//        }
+        if (!SystemService.printKeyLoadMessage()){
+            return null;
+        }
         return super.initWebApplicationContext(servletContext);
     }
 }

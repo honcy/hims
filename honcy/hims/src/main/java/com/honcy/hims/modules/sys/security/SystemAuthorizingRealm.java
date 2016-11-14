@@ -50,7 +50,6 @@ import com.honcy.hims.modules.sys.web.LoginController;
  * V1.0.1      2016/11/13      rdinfo    初始版本
  */
 @Service
-//@DependsOn({"userDao","roleDao","menuDao"})
 public class SystemAuthorizingRealm extends AuthorizingRealm {
 
     private Logger logger = LoggerFactory.getLogger(getClass());
@@ -221,8 +220,6 @@ public class SystemAuthorizingRealm extends AuthorizingRealm {
         private String loginName; // 登录名
         private String name; // 姓名
         private boolean mobileLogin; // 是否手机登录
-
-//		private Map<String, Object> cacheMap;
 
         public Principal(User user, boolean mobileLogin) {
             this.id = user.getId();
